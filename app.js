@@ -17,6 +17,14 @@ domElements.btnRemove.addEventListener('click', () => {
   }
 })
 
+domElements.btnRemoveAll.addEventListener('click', () => {
+  if (domElements.divTable.lastElementChild !== null) {
+    domElements.divTable.textContent = '';
+    number = 0;
+    renderResult(number);
+  }
+})
+
 const renderResult = (number) => {
   domElements.spanResult.textContent = number;
 }
